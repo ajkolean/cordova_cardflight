@@ -48,7 +48,7 @@ CardFlight.prototype.initialize = function() {
 
 
 CardFlight.prototype.authorize = function(apiToken, merchantToken, successCallback, errorCallback){
-  cordova.exec(successCallback, errorObjFunc(errorCallback), 'CDVCardFlight', 'authorizeCardFlightAccount', [apiToken, merchantToken])
+  cordova.exec(successCallback, errorCallback, 'CDVCardFlight', 'authorizeCardFlightAccount', [apiToken, merchantToken])
 }
 
 CardFlight.prototype.setApiTokens = function(successCallback, errorCallback, options) {
