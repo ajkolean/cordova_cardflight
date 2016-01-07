@@ -67,7 +67,7 @@ public class CDVCardFlight extends CordovaPlugin {
     return success;
   }
 
-  private void authorizeCardFlightAccount(String apiToken, String stripeMerchantToken, CallbackContext callbackContext) {
+  private void setApiTokens(String apiToken, String stripeMerchantToken, CallbackContext callbackContext) {
     if (apiToken == null || stripeMerchantToken == null) {
       logError("Need to send both an api token and a stripe merchant token to authorize cardflight");
       callbackContext.error("Need to send both an api token and a stripe merchant token to authorize cardflight");
